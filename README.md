@@ -8,12 +8,7 @@ Proyek ini bertujuan untuk mengembangkan aplikasi perdagangan elektronik yang me
 
 ## 🚀 1. Persyaratan Sistem Lokal
 
-Pastikan Anda telah menginstal komponen-komponen berikut di lingkungan lokal Anda. Versi yang direkomendasikan berdasarkan `composer.json` adalah:
-
--   **PHP:** Versi **8.2** atau lebih tinggi.
--   **Composer:** Manajer dependensi PHP.
--   **Node.js & NPM:** Dibutuhkan untuk manajemen _frontend_ (disarankan versi LTS).
--   **Git:** Untuk kontrol versi.
+Pastikan Anda telah menginstal: **PHP 8.2+**, **Composer**, **Node.js (LTS)**, **NPM**, dan **Git**.
 
 ---
 
@@ -21,11 +16,32 @@ Pastikan Anda telah menginstal komponen-komponen berikut di lingkungan lokal And
 
 Ikuti langkah-langkah ini untuk menyiapkan dan menjalankan proyek di komputer lokal Anda.
 
-### A. Mendapatkan Kode Sumber
+### A. Mendapatkan Kode Sumber & Verifikasi
 
-Kloning repositori ini (ganti placeholder dengan URL repositori Anda):
+1.  Kloning repositori:
+    ```bash
+    git clone [URL-REPOSITORI-ANDA]
+    cd e-commerce
+    ```
+2.  Verifikasi Composer dan NPM:
+    ```bash
+    composer -v
+    node -v && npm -v
+    ```
+
+### B. Instalasi Dependensi Dasar
+
+Untuk menginstal semua dependensi _backend_ (PHP) dan _frontend_ (JavaScript/CSS), gunakan perintah berikut:
+
+| Layanan               | Perintah           | Fungsi                                                                          |
+| :-------------------- | :----------------- | :------------------------------------------------------------------------------ |
+| **Backend (PHP)**     | `composer install` | Mengunduh semua dependensi PHP yang tercantum dalam `composer.json`.            |
+| **Frontend (JS/CSS)** | `npm install`      | Mengunduh semua dependensi JavaScript/Node yang tercantum dalam `package.json`. |
+
+### C. Proses Setup Otomatis (Cara Paling Cepat)
+
+Setelah dependensi dasar terinstal, gunakan _script_ `composer setup` untuk menyelesaikan konfigurasi yang tersisa:
 
 ```bash
-git clone [URL-REPOSITORI-ANDA]
-cd e-commerce
+composer setup
 ```
