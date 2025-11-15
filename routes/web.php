@@ -8,6 +8,8 @@ Route::get('/', function () {
     return view('front.welcome');
 })->name('home');
 
+Route::get('/product', \App\Http\Controllers\ProductController::class)->name('product.index');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
